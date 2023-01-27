@@ -2,9 +2,9 @@
 
     /* Quitar el margin top en caso de que metamos mas content y no solo el formulario */
     margin: 0 auto;
-    margin-top: 13rem;
+    margin-top: 12rem;
 
-    background: rgba(0, 0, 0, 0.8.);
+    background: rgba(0, 0, 0, 0.8);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -29,7 +29,8 @@
 }
 
 @media (max-width: 1150px) {
-    form {
+    .div-registro {
         width: 100%;
+        margin-top: 10rem;
     }
 }

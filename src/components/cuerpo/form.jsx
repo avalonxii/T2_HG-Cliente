@@ -29,7 +29,8 @@ export default function form() {
     const addUser = async(e) => {
         await addUsuario(valores)
         .then(() => {
-            
+            setValores(datos);
+            setVisible(false);
         }).catch(err =>{console.error(err);})
     }
   return (
@@ -49,17 +50,19 @@ export default function form() {
         labelPlaceholder="Introduce tu Email"
         initialValue=""
         width='20rem'
+        type='email'
         className='input-form'
         name='email'
         value={email}
         onChange={handLer} 
         />
         
-      <Button bordered shadow color="gradient" type='submit'onPress={() => setVisible(true)} className="btn-registro">
+      <Button bordered shadow size='lg' color="gradient" type='submit'onPress={() => setVisible(true)} className="btn-registro">
           Solicitar información
     </Button>
     <Modal
         scroll
+
         width="600px"
         aria-labelledby="modal-title"
         aria-describedby="modal-description"
