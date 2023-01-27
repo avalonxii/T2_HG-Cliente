@@ -1,6 +1,18 @@
+@import url('./components/cuerpo/cuerpo.css');
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+
+.div-pruebas{
+  height: 100vh;
+  background-image: url('assets/nnneon.svg');
+  background-repeat: none;
+  background-size: cover;
+  background-position: center;
+  position: fixed;
+  width: 100%;
+}
+

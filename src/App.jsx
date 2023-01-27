@@ -1,10 +1,10 @@
 import Cuerpo from "./components/cuerpo/Cuerpo";
-import Header from "./components/header/Header";
+import Nav from './components/header/Navegador';
 
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Nav />
       <Cuerpo />
     </div>
   );

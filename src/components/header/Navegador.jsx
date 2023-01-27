@@ -7,8 +7,7 @@ export default function App() {
   const [activeColor, setActiveColor] = React.useState("primary");
 
   return (
-    <div>
-      <Navbar  variant="sticky">
+      <Navbar  variant="sticky" >
         <Navbar.Brand>
           <Text b color="inherit" hideIn="xs">
             ????''
@@ -16,16 +15,12 @@ export default function App() {
         </Navbar.Brand>
         
         <Navbar.Content>
-          <Navbar.Link color="inherit" href="#">
-            Login
-          </Navbar.Link>
           <Navbar.Item>
-            <Button auto flat as={Link} href="#">
-              Sign Up
+            <Button auto flat as={Link} href="#" css={{ background: '$purple', color: 'white' }}>
+              Conocenos
             </Button>
           </Navbar.Item>
         </Navbar.Content>
       </Navbar>    
-    </div>
   )
 }
