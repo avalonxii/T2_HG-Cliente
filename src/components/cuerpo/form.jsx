@@ -1,8 +1,16 @@
 import React from 'react'
-import { Input,Button } from '@nextui-org/react'
+import { Input, Button ,Modal, useModal,Text } from '@nextui-org/react'
 import { useState } from 'react'
 import {addUsuario} from '../../service/api'
+
+
+
+
+
+
 export default function form() {
+
+    const { setVisible, bindings } = useModal();
 
     let datos = {
         nombre : '',
@@ -19,15 +27,13 @@ export default function form() {
     }
 
     const addUser = async(e) => {
-        e.preventDefault();
-        
         await addUsuario(valores)
         .then(() => {
             
         }).catch(err =>{console.error(err);})
     }
   return (
-    <form onSubmit={addUser}>
+    <div className='div-registro'>
         <Input
         clearable
         underlined
@@ -49,9 +55,35 @@ export default function form() {
         onChange={handLer} 
         />
         
-      <Button bordered shadow color="gradient" type='submit'>
-          Gradient
-        </Button>
-    </form>
+      <Button bordered shadow color="gradient" type='submit'onPress={() => setVisible(true)} className="btn-registro">
+          Solicitar información
+    </Button>
+    <Modal
+        scroll
+        width="600px"
+        aria-labelledby="modal-title"
+        aria-describedby="modal-description"
+        {...bindings}
+      >
+        <Modal.Header>
+          <Text id="modal-title" size={18}>
+            POLÍTICA DE PRIVACIDAD
+          </Text>
+        </Modal.Header>
+        <Modal.Body>
+          <Text id="modal-description">
+            Aceptas nuestra política de privacidad
+          </Text>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button auto flat color="error" onPress={() => setVisible(false)}>
+            Close
+          </Button>
+          <Button auto onPress={addUser}>
+            Agree
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    </div>
   )
 }

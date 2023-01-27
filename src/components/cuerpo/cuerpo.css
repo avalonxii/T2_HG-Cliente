@@ -1,5 +1,5 @@
-form {
-    
+.div-registro {
+
     /* Quitar el margin top en caso de que metamos mas content y no solo el formulario */
     margin: 0 auto;
     margin-top: 13rem;
@@ -20,12 +20,16 @@ form {
 }
 
 
-.input-form{
+.input-form {
     border: white;
 }
 
-@media (max-width: 1150px){
-    form{
+.btn-registro:hover {
+    transform: scale(1.1);
+}
+
+@media (max-width: 1150px) {
+    form {
         width: 100%;
     }
 }
