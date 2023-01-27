@@ -1,7 +1,10 @@
 form {
+    
     /* Quitar el margin top en caso de que metamos mas content y no solo el formulario */
-    margin-top: 10rem;
-    background: rgba(0, 0, 0, 0.8);
+    margin: 0 auto;
+    margin-top: 13rem;
+
+    background: rgba(0, 0, 0, 0.8.);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -11,7 +14,7 @@ form {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: 30%;
     height: 25rem;
     padding: 1rem;
 }
@@ -19,4 +22,10 @@ form {
 
 .input-form{
     border: white;
+}
+
+@media (max-width: 1150px){
+    form{
+        width: 100%;
+    }
 }
