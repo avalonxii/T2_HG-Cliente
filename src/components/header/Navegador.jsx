@@ -3,11 +3,8 @@ import { Navbar, Button, Link, Text, Card, Spacer, Radio, useTheme } from "@next
 import Logo from '../../assets/campusfp.png'
 
 export default function App() {
-  const [variant, setVariant] = React.useState("default");
-  const [activeColor, setActiveColor] = React.useState("primary");
-
   return (
-      <Navbar  variant="sticky" >
+      <Navbar variant="floating" className="navBar">
         <Navbar.Brand>
           <Text b color="inherit" >
             <img src={Logo} alt="" />
@@ -16,8 +13,8 @@ export default function App() {
         
         <Navbar.Content>
           <Navbar.Item>
-            <Button auto flat as={Link} href="https://campusfp.es/" target="_blank" css={{ background: '$purple', color: 'white' }}>
-              Conocenos
+            <Button auto flat as={Link} href="https://campusfp.es/" target="_blank" css={{ background: '$gradient', color: 'white' }}>
+              Conócenos
             </Button>
           </Navbar.Item>
         </Navbar.Content>

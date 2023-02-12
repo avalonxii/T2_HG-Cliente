@@ -11,6 +11,7 @@
   "dependencies": {
     "@nextui-org/react": "1.0.0-beta.12",
     "axios": "^1.2.5",
+    "createjs": "^1.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.57.1"
