@@ -3,11 +3,6 @@ import { Input, Button ,Modal, useModal,Text } from '@nextui-org/react'
 import { useState } from 'react'
 import {addUsuario} from '../../service/api'
 
-
-
-
-
-
 export default function form() {
 
     const { setVisible, bindings } = useModal();
@@ -36,18 +31,17 @@ export default function form() {
   return (
     <div className='div-registro'>
         <Input
-        clearable
         underlined
-        labelPlaceholder="Introduce tu nombre"
+        label="Introduce tu nombre"
         width='20rem'
         name='nombre'
         value={nombre}
+        type='text'
         onChange={(e) => handLer(e)} 
       />
       <Input
-        clearable
         underlined
-        labelPlaceholder="Introduce tu Email"
+        label='Introduce tu email'
         initialValue=""
         width='20rem'
         type='email'
