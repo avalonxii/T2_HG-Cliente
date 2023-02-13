@@ -80,10 +80,10 @@ export default function form() {
         </Modal.Body>
         <Modal.Footer>
           <Button auto flat color="error" onPress={() => setVisible(false)}>
-            Close
+            Cerrar
           </Button>
           <Button auto onPress={addUser}>
-            Agree
+            Aceptar
           </Button>
         </Modal.Footer>
       </Modal>
